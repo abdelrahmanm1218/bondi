@@ -1,0 +1,209 @@
+:root {
+    --main-dark: #19283f;
+    --main-green: #33d1cc;
+    --main-red: #ff3150;
+    --main-yellow: #ffc400;
+    --section-color: #eff7fa;
+}
+.main-btn, .main-btn:hover {
+    background-color: var(--main-red);
+    color: var(--main-yellow);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.main-title p::after {
+    content: "";
+    width:120px;
+    height:2px;
+    background-color: var(--main-green);
+    transform: translateX(-50%);
+    position: absolute;
+    bottom:-20px;
+    left: 50%;
+
+}
+/*start header| navbar*/
+nav.navbar {
+    height:70px;
+}
+nav.navbar, nav .container {
+    background-color: var(--main-dark);
+
+}
+ul.navbar-nav li a {
+    color: white;
+    transition: all 0.3s ease;
+}
+ul.navbar-nav li a:hover {
+    color: var(--main-green);
+}
+ul.navbar-nav li a.active {
+    color: var(--main-green) !important;
+}
+.search {
+    border-left: 1px solid var(--main-green);
+}
+.search svg {
+    color: var(--main-green);
+}
+a.main-btn, a.main-btn:hover {
+    background-color: var(--main-red);
+    color: var(--main-yellow);    
+}
+.burger-menu {
+    color: var(--main-green);
+}
+/*end header| navbar*/
+/*start landing*/
+.landing {
+    background-color: var(--main-dark);
+    height: calc(100vh - 70px)
+}
+.landing .btn {
+    background-color: var(--main-red);
+    color: var(--main-yellow);
+}
+/*end landing*/
+/*start services*/
+.services .box .icon-holder {
+    height: 200px;
+}
+.services .box .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services .box .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.services .box .icon-holder .icon {
+    color: var(--main-green);
+}
+.services .box h5{
+    color: var(--main-yellow);
+}
+/*end services*/
+/*start our work*/
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work ul li {
+    transition: all 0.2s ease;
+}
+.our-work ul li:hover {
+    color: var(--main-red);
+}
+.our-work ul li.active {
+    background-color: var(--main-red);
+    color: var(--main-yellow);
+}
+.our-work .box {
+    padding:5px;
+    position: relative;
+    overflow: hidden;
+}
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    top:-10px;
+    left:-10px;
+    width: 0;
+    height: 0;
+    background-color: var(--main-green);
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.our-work .box:hover::before {
+    left:5px;
+    top:5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+}
+/*end our work*/
+/*start stuff*/
+.stuff .description {
+    max-width:500px;
+}
+/*end stuff*/
+/*start team */
+.team {
+    background-color: var(--section-color);
+}
+.team h2 {
+    color: var(--main-yellow)
+}
+.team .container .box .title {
+    background-color: var(--main-green);
+    color: white;
+}
+/*end team */
+/*start project*/
+.project {
+    background-color: var(--main-dark);
+}
+/*end project*/
+/*start subscribe*/
+.subscribe {
+    background-color: var(--main-yellow);
+}
+.subscribe form #email {
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subscribe form #email:focus {
+    outline: none;
+}
+.subscribe form #email::placeholder {
+    color:white
+}
+.subscribe__button {
+    background-color: var(--main-dark) !important;
+    color: var(--main-yellow) !important;
+    text-transform: capitalize !important;
+    
+}
+/*end subscribe*/
+/*start footer*/
+.footer {
+    background-color: var(--main-dark);
+}
+
+.info__copyright .copyright__name {
+    color: var(--main-green) !important;
+}
+.info__copyright .copyright__template {
+    color: var(--main-yellow);
+}
+@media (max-width:767px) {
+    .contact__socials {
+        justify-content: center;
+    }
+}
+.contact__socials__list-item {
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.contact__socials__list-item--facebook{
+    background-color: #1877f2;
+}
+.contact__socials__list-item--twitter{
+    background-color: #1da1f2;
+}
+.contact__socials__list-item--youtube{
+    background-color: #ff0000;
+}
+.contact__socials__list-item--linkedin{
+    background-color: #0077b5;;
+}
+/*end footer*/
